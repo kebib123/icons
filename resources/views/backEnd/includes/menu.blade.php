@@ -19,7 +19,6 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
         </div>
         <div flex class="hide-scroll">
             <nav class="scroll nav-active-primary">
-
                 <ul class="nav" ui-nav>
                     <li class="nav-header hidden-folded">
                         <small class="text-muted">{{ trans('backLang.main') }}</small>
@@ -33,7 +32,6 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                             <span class="nav-text">{{ trans('backLang.dashboard') }}</span>
                         </a>
                     </li>
-
 
                     @if(Helper::GeneralWebmasterSettings("analytics_status"))
                         @if(@Auth::user()->permissionsGroup->analytics_status)
@@ -214,6 +212,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                         <small class="text-muted">{{ trans('backLang.siteData') }}</small>
                     </li>
 
+
                     <?php
                     $data_sections_arr = explode(",", Auth::user()->permissionsGroup->data_sections);
                     ?>
@@ -340,6 +339,10 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                             $currentFolder3 = "users"; // Put folder name here
                             $PathCurrentFolder3 = substr($urlAfterRoot, 0, strlen($currentFolder2));
                             ?>
+
+
+
+
                             <li {{ ($PathCurrentFolder==$currentFolder || $PathCurrentFolder2==$currentFolder2 || $PathCurrentFolder3==$currentFolder3 ) ? 'class=active' : '' }}>
                                 <a>
 <span class="nav-caret">
@@ -434,7 +437,39 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                             </ul>
                         </li>
 
+
+
                     @endif
+
+                    <li>
+                        <a>
+<span class="nav-caret">
+<i class="fa fa-caret-down"></i>
+</span>
+                            <span class="nav-icon">
+<i class="material-icons">&#xe8b8;</i>
+</span>
+                            <span class="nav-text">Image Management</span>
+                        </a>
+                        <ul class="nav-sub">
+                            <li>
+                                <a href="{{ route('categories') }}">
+                                    <span class="nav-text">Categories</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="{{ route('menus') }}">
+                                    <span class="nav-text">Gender</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="{{ route('users') }}">
+                                    <span class="nav-text">Age</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
                 </ul>
             </nav>
         </div>

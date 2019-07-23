@@ -40,6 +40,13 @@ Route::get('/admin', function () {
     return redirect()->route('adminHome');
 });
 
+Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middleware' => ['auth']], function () {
+    Route::any('/categories', 'ImageController@categories')->name('categories');
+    Route::get('delete-category/{id}', 'ImageController@delete_category')->name('category-delete');
+    Route::any('edit-category/{id?}', 'ImageController@edit_category')->name('category-edit');
+});
+
+
 Route::Group(['prefix' => env('BACKEND_PATH'), 'middleware' => ['auth']], function () {
 
     // No Permission

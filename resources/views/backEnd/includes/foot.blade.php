@@ -4,3 +4,9 @@
 </script>
 <script src="{{ URL::to('backEnd/scripts/app.html.js') }}"></script>
 {!! Helper::SaveVisitorInfo("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") !!}
+
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('desc');
+
+</script>
