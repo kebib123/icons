@@ -10,3 +10,22 @@
     CKEDITOR.replace('desc');
 
 </script>
+
+<script src="{{url('js/select2.min.js')}}"></script>
+<script>
+    $(document).ready(function () {
+        $('#tags').select2();
+        $('#cat').select2();
+        $('#gen').select2();
+        $('#age').select2();
+        $('#race').select2();
+        $('#hair').select2();
+        $('#body').select2();
+        $('#special').select2();
+        $('#credits').select2();
+        $('#models').select2();
+        $('#trends').select2();
+        $('#categories').select2();
+        $('#styles').select2();
+    });
+</script>

@@ -48,9 +48,10 @@
                                                           class="form-control"></textarea></div>
                                         </div>
                                     </div>
+                                    <button type="submit" class="btn btn-primary">Add Category</button>
+
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Add Category</button>
 
 
                                 <!-- /.box-body -->
@@ -105,12 +106,15 @@
                                     </td>
                                     <td>{!! $value->description !!}</td>
                                     <td>
-                                        <a href="{{route('category-delete',$value->id)}}" onclick="return confirm('Confirm Delete?')"
+                                        <a href="{{route('category-delete',$value->id)}}"
+                                           onclick="return confirm('Confirm Delete?')"
                                            class="btn btn-sm btn btn-danger"><i class="fa fa-trash"></i> </a>
-                                        <a href="{{route('category-edit',$value->id)}}" class="btn btn-sm btn btn-primary"><i
+                                        <a href="{{route('category-edit',$value->id)}}"
+                                           class="btn btn-sm btn btn-primary"><i
                                                     class="fa fa-edit"></i> </a>
                                     </td>
                                 </tr>
+
                             @endforeach
                             </tbody>
                         </table>

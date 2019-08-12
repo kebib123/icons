@@ -36,18 +36,83 @@ Route::get('/oauth/{driver}', 'Auth\SocialAuthController@redirectToProvider')->n
 Route::get('/oauth/{driver}/callback', 'Auth\SocialAuthController@handleProviderCallback')->name('social.callback');
 
 // default path after login
-Route::get('/admin', function () {
-    return redirect()->route('adminHome');
+//Route::get('/admin', function () {
+//    return redirect()->route('adminHome');
+//});
+Route::get('/admin', 'HomeController@index')->name('adminHome');
+
+Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middleware' => ['auth']], function () {
+    Route::any('/image-categories', 'ImageController@categories')->name('categories');
+    Route::any('/image-genders', 'ImageController@genders')->name('genders');
+    Route::any('/image-races', 'ImageController@races')->name('races');
+    Route::any('/image-ages', 'ImageController@ages')->name('ages');
+    Route::any('/image-hairs', 'ImageController@hairs')->name('hairs');
+    Route::any('/image-body-types', 'ImageController@body_types')->name('body-types');
+    Route::any('/image-tags','ImageController@tags')->name('tags');
+    Route::any('/image-credits','ImageController@credits')->name('credits');
+    Route::any('/image','ImageController@image_upload')->name('image-upload');
+    Route::any('/show-image', 'ImageController@show_image')->name('show-image');
+    Route::any('/image-special-features', 'ImageController@special_features')->name('special-features');
+    Route::get('delete-category/{id}', 'ImageController@delete_category')->name('category-delete');
+    Route::get('delete-gender/{id}', 'ImageController@delete_gender')->name('gender-delete');
+    Route::get('delete-race/{id}', 'ImageController@delete_race')->name('race-delete');
+    Route::get('delete-age/{id}', 'ImageController@delete_age')->name('age-delete');
+    Route::get('delete-hair/{id}', 'ImageController@delete_hair')->name('hair-delete');
+    Route::get('delete-body-types/{id}', 'ImageController@delete_body_types')->name('body-delete');
+    Route::get('delete-special-features/{id}', 'ImageController@delete_special_features')->name('special-delete');
+    Route::get('delete-tags/{id}', 'ImageController@delete_tags')->name('tags-delete');
+    Route::get('delete-credits/{id}', 'ImageController@delete_credits')->name('credits-delete');
+    Route::get('delete-image/{id}', 'ImageController@delete_image')->name('image-delete');
+    Route::any('edit-category/{id?}', 'ImageController@edit_category')->name('category-edit');
+    Route::any('edit-gender/{id?}', 'ImageController@edit_gender')->name('gender-edit');
+    Route::any('edit-race/{id?}', 'ImageController@edit_race')->name('race-edit');
+    Route::any('edit-age/{id?}', 'ImageController@edit_age')->name('age-edit');
+    Route::any('edit-hair/{id?}', 'ImageController@edit_hair')->name('hair-edit');
+    Route::any('edit-body-types/{id?}', 'ImageController@edit_body_types')->name('body-edit');
+    Route::any('edit-special-features/{id?}', 'ImageController@edit_special_features')->name('special-edit');
+    Route::any('edit-tags/{id?}', 'ImageController@edit_tags')->name('tags-edit');
+    Route::any('edit-credits/{id?}', 'ImageController@edit_credits')->name('credits-edit');
+    Route::any('edit-image/{id?}', 'ImageController@edit_image')->name('image-edit');
 });
 
 Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middleware' => ['auth']], function () {
-    Route::any('/categories', 'ImageController@categories')->name('categories');
-    Route::get('delete-category/{id}', 'ImageController@delete_category')->name('category-delete');
-    Route::any('edit-category/{id?}', 'ImageController@edit_category')->name('category-edit');
+    Route::any('/icon-category', 'IconController@category')->name('category');
+    Route::any('/icon-trend', 'IconController@icon_trend')->name('icon-trend');
+    Route::any('/icon-style', 'IconController@icon_style')->name('icon-style');
+    Route::any('/icon-upload', 'IconController@icon_upload')->name('icon-upload');
+    Route::any('/show-icon', 'IconController@show_icon')->name('show-icon');
+    Route::any('edit-icon-category/{id?}', 'IconController@edit_icon_category')->name('edit-icon-category');
+    Route::any('edit-icon-trend/{id?}', 'IconController@edit_icon_trend')->name('edit-icon-trend');
+    Route::any('edit-icon-style/{id?}', 'IconController@edit_icon_style')->name('edit-icon-style');
+    Route::any('edit-icon-upload/{id?}', 'IconController@edit_icon_upload')->name('edit-icon-upload');
+    Route::any('delete-icon-category/{id?}', 'IconController@delete_icon_category')->name('icon-category-delete');
+    Route::any('delete-icon-trend/{id?}', 'IconController@delete_icon_trend')->name('icon-trend-delete');
+    Route::any('delete-icon-style/{id?}', 'IconController@delete_icon_style')->name('icon-style-delete');
+    Route::any('delete-icon-upload/{id?}', 'IconController@delete_icon_upload')->name('icon-upload-delete');
+});
+
+Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middleware' => ['auth']], function () {
+    Route::any('/music-themes', 'MusicController@themes')->name('theme');
+    Route::any('edit-music-theme/{id?}','MusicController@edit_theme')->name('edit-music-theme');
+    Route::any('delete-music-theme/{id?}', 'MusicController@delete_theme')->name('delete-music-theme');
+    Route::any('/music-genre', 'MusicController@genre')->name('genre');
+    Route::any('edit-music-genre/{id?}','MusicController@edit_genre')->name('edit-music-genre');
+    Route::any('delete-music-genre/{id?}', 'MusicController@delete_genre')->name('delete-music-genre');
+    Route::any('/music-mood', 'MusicController@mood')->name('mood');
+    Route::any('edit-music-mood/{id?}','MusicController@edit_mood')->name('edit-music-mood');
+    Route::any('delete-music-mood/{id?}', 'MusicController@delete_mood')->name('delete-music-mood');
+    Route::any('/music-artist', 'MusicController@artist')->name('artist');
+    Route::any('edit-music-artist/{id?}','MusicController@edit_artist')->name('edit-music-artist');
+    Route::any('delete-music-artist/{id?}', 'MusicController@delete_artist')->name('delete-music-artist');
+    Route::any('/music-upload', 'MusicController@music')->name('music');
+    Route::any('edit-music-upload/{id?}','MusicController@edit_music')->name('edit-music');
+    Route::any('delete-music-upload/{id?}', 'MusicController@delete_music')->name('delete-music');
+    Route::any('/show-music', 'MusicController@show_music')->name('show-music');
+
 });
 
 
-Route::Group(['prefix' => env('BACKEND_PATH'), 'middleware' => ['auth']], function () {
+Route::group(['prefix' => env('BACKEND_PATH'), 'middleware' => ['auth']], function () {
 
     // No Permission
     Route::get('/403', function () {
@@ -60,7 +125,7 @@ Route::Group(['prefix' => env('BACKEND_PATH'), 'middleware' => ['auth']], functi
     })->name('NotFound');
 
     // Admin Home
-    Route::get('/', 'HomeController@index')->name('adminHome');
+//    Route::get('/', 'HomeController@index')->name('adminHome');
     //Search
     Route::get('/search', 'HomeController@search')->name('adminSearch');
     Route::post('/find', 'HomeController@find')->name('adminFind');

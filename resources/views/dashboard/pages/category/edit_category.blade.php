@@ -45,9 +45,10 @@
                                                   class="form-control">{{$find->description}}</textarea></div>
                                 </div>
                             </div>
+                            <button type="submit" class="btn btn-primary">Update Category</button>
+
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Update Category</button>
 
 
                         <!-- /.box-body -->

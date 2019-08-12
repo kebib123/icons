@@ -454,22 +454,128 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                         <ul class="nav-sub">
                             <li>
                                 <a href="{{ route('categories') }}">
-                                    <span class="nav-text">Categories</span>
+                                    <span class="nav-text">Image Categories</span>
                                 </a>
                             </li>
-                            <li >
-                                <a href="{{ route('menus') }}">
+                            <li>
+                                <a href="{{ route('genders') }}">
                                     <span class="nav-text">Gender</span>
                                 </a>
                             </li>
-                            <li >
-                                <a href="{{ route('users') }}">
+                            <li>
+                                <a href="{{ route('races') }}">
+                                    <span class="nav-text">Race</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('ages') }}">
                                     <span class="nav-text">Age</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('hairs') }}">
+                                    <span class="nav-text">Hair</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('body-types') }}">
+                                    <span class="nav-text">Body Type</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('special-features') }}">
+                                    <span class="nav-text">Special Features</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('tags') }}">
+                                    <span class="nav-text">Image Tags</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('credits') }}">
+                                    <span class="nav-text">Image Credits</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('image-upload') }}">
+                                    <span class="nav-text">Image Upload</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a>
+                       <span class="nav-caret">
+               <i class="fa fa-caret-down"></i>
+                           </span>
+                            <span class="nav-icon">
+                              <i class="material-icons">&#xe8b8;</i>
+                                                             </span>
+                            <span class="nav-text">Icons Management</span>
+                        </a>
+                        <ul class="nav-sub">
+                            <li>
+                                <a href="{{ route('category') }}">
+                                    <span class="nav-text">Icons Category</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('icon-trend')}}">
+                                    <span class="nav-text">Icons Trend</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('icon-style')}}">
+                                    <span class="nav-text">Icon Style</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('icon-upload')}}">
+                                    <span class="nav-text">Icon Upload</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
-
+                    <li>
+                        <a>
+                       <span class="nav-caret">
+               <i class="fa fa-caret-down"></i>
+                           </span>
+                            <span class="nav-icon">
+                              <i class="material-icons">&#xe8b8;</i>
+                                                             </span>
+                            <span class="nav-text">Music Management</span>
+                        </a>
+                        <ul class="nav-sub">
+                        <li>
+                        <a href="{{ route('theme') }}">
+                            <span class="nav-text">Music Theme</span>
+                        </a>
+                    </li>
+                            <li>
+                                <a href="{{ route('genre') }}">
+                                    <span class="nav-text">Music Genre</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('mood') }}">
+                                    <span class="nav-text">Music Mood</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('artist') }}">
+                                    <span class="nav-text">Music Artist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('music') }}">
+                                    <span class="nav-text">Music Upload</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
