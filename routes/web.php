@@ -401,6 +401,18 @@ Route::Group(['prefix' => '/api/v1'], function () {
 
 
 // Frontend Routes
+
+Route::group(['namespace' => 'Frontend'], function () {
+
+    Route::group(['namespace' => 'Forum'], function () {
+        Route::any('/forum', 'ForumController@index')->name('forum');
+        Route::post('new-topic', 'ForumController@new_topic')->name('new-topic');
+    });
+
+    Route::get('/index', 'PageController@index')->name('index');
+
+
+});
 // ../site map
 Route::get('/sitemap.xml', 'SiteMapController@siteMap')->name('siteMap');
 Route::get('/{lang}/sitemap', 'SiteMapController@siteMap')->name('siteMapByLang');
