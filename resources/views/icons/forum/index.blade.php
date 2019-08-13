@@ -27,10 +27,12 @@
 </head>
 <body>
 
+
 <div class="forum_layout">
     <header class="header">
-        <a href="" class="header-logo">
-            <img src="http://www.iconhot.com/icon/png/wood-social-networking/512/blinklist-logo-webtreatsetc.png">
+        <a href="forum-index.html" class="logo">
+            <img src="http://www.iconhot.com/icon/png/wood-social-networking/512/blinklist-logo-webtreatsetc.png"
+                 alt="">
         </a>
 
         <div class="panel ">
@@ -193,23 +195,57 @@
                                 </div>
 
                                 <div class="category-desc">
-                                   {!! $value->description !!}
+                                    {!! $value->description !!}
                                 </div>
                             </li>
                             @include('icons.forum.Category.multi_cat',['category'=>$value])
 
                         @endforeach
 
+                        <div class="category-status">
+                            <span class="badge-wrapper box">
+                                <span class="badge-category-bg" style="background-color: #AB9364;"></span>
+                                <span style="color: #FFFFFF;" class="badge-category ">
+                                    <span class="category-name">Uncategorized</span>
+                                </span>
+                            </span>
+                            <span class="topic-count">× 4</span>
+                        </div>
+
+                        <div class="category-desc">
+                            Topics that don't need a category, or don't fit into any other existing category.
+                        </div>
+                        </li>
+                        <li class="select-kit-row category-row  ">
+                            <div class="category-status">
+                            <span class="badge-wrapper box">
+                                <span class="badge-category-bg" style="background-color: #AB9364;"></span>
+                                <span style="color: #FFFFFF;" class="badge-category ">
+                                    <span class="category-name">Uncategorized</span>
+                                </span>
+                            </span>
+                                <span class="topic-count">× 4</span>
+                            </div>
+
+                            <div class="category-desc">
+                                Topics that don't need a category, or don't fit into any other existing category.
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
                 <ul id="navigation-bar" class="nav nav-pills">
                     <li title="topics with recent posts" class="active"><a href="">Latest</a></li>
-                    <!--<li title="the most active topics in the last year, month, week or day" class=""><a href="">Top</a>-->
-                    <!--</li>-->
-                    <!--<li title="all topics grouped by category" class="ember-view"><a href="/categories">Categories</a>-->
-                    <!--</li>-->
+                    <li title="the most active topics in the last year, month, week or day" class=""><a href="">Top</a>
+                    </li>
+                    <li title="all topics grouped by category" class=""><a href="/categories">Categories</a>
+                    </li>
                 </ul>
+
+                <button id="create-topic" class="btn btn-default btn btn-icon-text ">
+                    <i class="fa fa-plus d-icon d-icon-plus"></i>
+                    <span class="d-button-label">New Topic</span>
+                </button>
                 <div class="clearfix"></div>
             </section>
         </div>
@@ -377,6 +413,65 @@
             </div>
         </div>
     </div>
+
+    <div id="reply-control" class="">
+        <div class="reply-area">
+            <div class="composer-fields">
+                <div class="reply-to">
+                    <button title="minimize the composer panel" class="toggler">
+                        <i class="fa fa-chevron-down d-icon d-icon-chevron-down"></i>
+                    </button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="title-category">
+                    <div class="title-input">
+                        <input type="text" id="title_link" placeholder="Type title, or paste a link here">
+                    </div>
+                    <div class="category-input list-controls">
+                        <button class="category-btn" id="categoryBtn">
+                            All categories&nbsp;<i class="icofont-thin-down"></i>
+                        </button>
+                        <div class="select-kit-body">
+                            <ul class="category-collection" data-simplebar="init">
+                                @foreach($categorycomp as $value)
+                                    <li class="select-kit-row category-row is-highlighted ">
+                                        <div class="category-status">
+                            <span class="badge-wrapper box">
+                                <span class="badge-category-bg" style="background-color: #AB9364;"></span>
+                                <span style="color: #FFFFFF;" class="badge-category ">
+                                    <span class="category-name">{{$value->name}}</span>
+                                </span>
+                            </span>
+                                            <span class="topic-count">× 4</span>
+                                        </div>
+
+                                        <div class="category-desc">
+                                            {!! $value->description !!}
+                                        </div>
+                                    </li>
+                                    @include('icons.forum.Category.multi_cat',['category'=>$value])
+
+                                @endforeach
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar-visible">
+                <textarea id="desc"></textarea>
+            </div>
+            <div class="submit-panel">
+                <div class="save-or-cancel">
+                    <button title="Or press Ctrl+Enter" id="new_topic" class="btn ">
+                        <i class="fa fa-plus d-icon d-icon-plus"></i>
+                        <span class="">Create Topic</span>
+                    </button>
+                    <a href="" class="cancel">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -462,6 +557,18 @@
     toastr.warning("{{ $error }}");
     @endforeach
     @endif
+</script>
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('desc');
+
+</script>
+<script>
+    $(document).ready(function () {
+        $('#new_topic').click(function () {
+            let topic= $('')
+        });
+    });
 </script>
 </body>
 </html>

@@ -566,11 +566,11 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                             <span class="nav-text">Music Management</span>
                         </a>
                         <ul class="nav-sub">
-                        <li>
-                        <a href="{{ route('theme') }}">
-                            <span class="nav-text">Music Theme</span>
-                        </a>
-                    </li>
+                            <li>
+                                <a href="{{ route('theme') }}">
+                                    <span class="nav-text">Music Theme</span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="{{ route('genre') }}">
                                     <span class="nav-text">Music Genre</span>
