@@ -466,7 +466,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                             <span class="nav-icon">
 <i class="material-icons">&#xe8b8;</i>
 </span>
-                            <span class="nav-text">Image Manager</span>
+                            <span class="nav-text">Image Management</span>
                         </a>
                         <ul class="nav-sub">
                             <li>
