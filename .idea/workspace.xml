@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="26bc97b2-e7ec-426d-9718-8d94d52c6969" name="Default" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="26bc97b2-e7ec-426d-9718-8d94d52c6969" name="Default" comment="" />
+=======
+    <list default="true" id="26bc97b2-e7ec-426d-9718-8d94d52c6969" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+>>>>>>> manish
+>>>>>>> project
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +37,67 @@
     <select />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="IconController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/IconController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="318" column="49" selection-start-line="318" selection-start-column="49" selection-end-line="318" selection-end-column="49" />
+              <folding>
+                <element signature="e#48#75#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/pages/icons/styles.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
+<<<<<<< HEAD
+        </entry>
+      </file>
+      <file leaf-file-name="icon_upload.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/pages/icons/icon_upload.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category_dropdown.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/pages/icons/category_dropdown.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+=======
+        </entry>
+      </file>
+      <file leaf-file-name="icon_upload.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/pages/icons/icon_upload.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category_dropdown.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/pages/icons/category_dropdown.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+>>>>>>> manish
+      <file leaf-file-name="foot.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backEnd/includes/foot.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> project
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -224,11 +294,20 @@
       <path value="$PROJECT_DIR$/vendor/kylekatarnls/update-helper" />
     </include_path>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="7">
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
+>>>>>>> project
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1386" />
     <option name="height" value="789" />
+=======
+    <option name="width" value="1378" />
+    <option name="height" value="780" />
+>>>>>>> 505e61af15c934a0bf40b617fe745d68e9434605
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -236,22 +315,107 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="icons8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="icons8" type="462c0819:PsiDirectoryNode" />
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Composer" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+            </path>
+            <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> manish
+            </path>
+            <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+>>>>>>> manish
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+<<<<<<< HEAD
               <item name="icons8" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+=======
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartend" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+>>>>>>> project
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,15 +484,26 @@
       <workItem from="1565328181286" duration="11498000" />
       <workItem from="1565501194609" duration="9896000" />
       <workItem from="1565577522860" duration="616000" />
-      <workItem from="1565586434046" duration="6941000" />
+      <workItem from="1565586434046" duration="7558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="255640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="251534000" />
+=======
+    <option name="totallyTimeSpent" value="255245000" />
+>>>>>>> manish
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+>>>>>>> project
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007657" side_tool="true" weight="0.39379084" />
@@ -336,8 +511,12 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4992343" weight="0.22711268" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49673203" visible="true" weight="0.21133603" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4992343" weight="0.22712418" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4992343" visible="true" weight="0.22712418" />
+>>>>>>> manish
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49673203" visible="true" weight="0.2118003" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info id="Structure" order="1" sideWeight="0.503268" side_tool="true" weight="0.24583964" />
@@ -369,6 +548,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49673203" visible="true" weight="0.20877458" />
       <window_info id="Structure" order="1" sideWeight="0.503268" side_tool="true" weight="0.24583964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -376,15 +556,42 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Message" order="0" />
+=======
+<<<<<<< HEAD
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+=======
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49673203" visible="true" weight="0.20877458" />
+>>>>>>> manish
+      <window_info id="Structure" order="1" sideWeight="0.503268" side_tool="true" weight="0.24583964" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+=======
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> manish
+>>>>>>> project
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4992343" weight="0.22712418" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007657" side_tool="true" weight="0.39379084" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+=======
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49673203" visible="true" weight="0.20877458" />
+>>>>>>> project
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,10 +618,28 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/Model/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/pages/image/show_image.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="55" selection-end-line="104" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/IconTrend.php">
+=======
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/pages/icons/icon_upload.blade.php">
+>>>>>>> manish
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -441,8 +666,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/IconUpload.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="140">
+          <caret line="318" column="49" selection-start-line="318" selection-start-column="49" selection-end-line="318" selection-end-column="49" />
+          <folding>
+            <element signature="e#48#75#0#PHP" expanded="true" />
+          </folding>
+=======
         <state relative-caret-position="85">
           <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="33" />
+>>>>>>> manish
         </state>
       </provider>
     </entry>
@@ -536,8 +769,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/pages/music/edit_music.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+=======
         <state relative-caret-position="238">
           <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+>>>>>>> manish
         </state>
       </provider>
     </entry>
@@ -596,6 +834,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/backEnd/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/AppData/Local/Temp/menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -603,10 +842,14 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/menu.blade.php" />
+>>>>>>> project
     <entry file="file://$PROJECT_DIR$/resources/views/backEnd/includes/menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="434" column="37" selection-start-line="434" selection-start-column="37" selection-end-line="434" selection-end-column="37" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -614,9 +857,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
           <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="62" />
+=======
+>>>>>>> project
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/AppServiceProvider.php" />
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -624,16 +870,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/ComposerServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="27" column="66" lean-forward="true" selection-start-line="27" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/ComposerServiceProvider.php" />
     <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -641,26 +882,22 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Helper.php" />
+>>>>>>> project
     <entry file="file://$PROJECT_DIR$/app/Helpers/Helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="e#83#105#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/public/images/music/1565589767.jpg" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ImageController.php">
+=======
     <entry file="file://$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php">
+>>>>>>> manish
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
@@ -670,6 +907,9 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/pages/music/edit_music.blade.php">
+=======
     <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -677,28 +917,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/foot.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" selection-start-line="22" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/foot.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/backEnd/includes/foot.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/head.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="31" column="69" selection-start-line="31" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/head.blade.php" />
     <entry file="file://$PROJECT_DIR$/routes/web.php">
+>>>>>>> manish
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="414" column="3" selection-start-line="414" selection-start-column="3" selection-end-line="414" selection-end-column="3" />
@@ -714,25 +939,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/ForumController.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="136">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+=======
         <state relative-caret-position="27">
           <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
           <folding>
             <element signature="e#48#76#0#PHP" expanded="true" />
           </folding>
+>>>>>>> manish
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="54" selection-start-line="54" selection-end-line="65" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/web.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/icons/forum/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="5032">
+          <caret line="296" column="45" lean-forward="true" selection-start-line="296" selection-start-column="45" selection-end-line="296" selection-end-column="45" />
+=======
         <state relative-caret-position="170">
           <caret line="181" column="74" lean-forward="true" selection-start-line="181" selection-start-column="74" selection-end-line="181" selection-end-column="74" />
+>>>>>>> manish
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/MusicController.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="170">
+          <caret line="181" column="74" lean-forward="true" selection-start-line="181" selection-start-column="74" selection-end-line="181" selection-end-column="74" />
+=======
+        <state relative-caret-position="238">
+          <caret line="318" selection-start-line="318" selection-end-line="318" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Composer/StyleComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+>>>>>>> project
         </state>
       </provider>
     </entry>
