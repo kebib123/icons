@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="{{ URL::to('backEnd/assets/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css"/>
 <link rel="stylesheet" href="{{ URL::to('backEnd/assets/styles/app.min.css') }}">
 <link rel="stylesheet" href="{{ URL::to('backEnd/assets/styles/font.css') }}" type="text/css"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" rel="stylesheet">
 
 @if( trans('backLang.direction')=="rtl")
     <link rel="stylesheet" href="{{ URL::to('backEnd/assets/styles/rtl.css') }}">

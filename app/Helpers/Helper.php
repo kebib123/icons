@@ -30,6 +30,14 @@ class Helper
 
         return $string;
     }
+    static function categorySeperator($string = '', $size)
+    {
+        for ($i = 2; $i < $size; $i++) {
+            $string .= $string;
+        }
+
+        return $string;
+    }
     static function GeneralWebmasterSettings($var)
     {
         $WebmasterSetting = WebmasterSetting::find(1);
