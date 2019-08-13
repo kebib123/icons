@@ -24,6 +24,6 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('*','app\Composer\StyleComposer');
+        View::composer('*', 'App\composer\ForumCategoryComposer');
     }
 }

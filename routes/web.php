@@ -92,6 +92,17 @@ Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middlew
 });
 
 Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middleware' => ['auth']], function () {
+    Route::any('/categories', 'ImageController@categories')->name('categories');
+    Route::get('delete-category/{id}', 'ImageController@delete_category')->name('category-delete');
+    Route::any('edit-category/{id?}', 'ImageController@edit_category')->name('category-edit');
+});
+Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middleware' => ['auth']], function () {
+    Route::any('/add-category-forum', 'ForumController@add_category_forum')->name('add-category-forum');
+    Route::any('all-topics', 'ForumController@all_topics')->name('all-topics');
+
+});
+
+Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middleware' => ['auth']], function () {
     Route::any('/music-themes', 'MusicController@themes')->name('theme');
     Route::any('edit-music-theme/{id?}','MusicController@edit_theme')->name('edit-music-theme');
     Route::any('delete-music-theme/{id?}', 'MusicController@delete_theme')->name('delete-music-theme');
