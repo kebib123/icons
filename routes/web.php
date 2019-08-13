@@ -92,6 +92,17 @@ Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middlew
 });
 
 Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middleware' => ['auth']], function () {
+    Route::any('/categories', 'ImageController@categories')->name('categories');
+    Route::get('delete-category/{id}', 'ImageController@delete_category')->name('category-delete');
+    Route::any('edit-category/{id?}', 'ImageController@edit_category')->name('category-edit');
+});
+Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middleware' => ['auth']], function () {
+    Route::any('/add-category-forum', 'ForumController@add_category_forum')->name('add-category-forum');
+    Route::any('all-topics', 'ForumController@all_topics')->name('all-topics');
+
+});
+
+Route::Group(['prefix' => env('BACKEND_PATH'),'namespace' => 'Backend', 'middleware' => ['auth']], function () {
     Route::any('/music-themes', 'MusicController@themes')->name('theme');
     Route::any('edit-music-theme/{id?}','MusicController@edit_theme')->name('edit-music-theme');
     Route::any('delete-music-theme/{id?}', 'MusicController@delete_theme')->name('delete-music-theme');
@@ -390,6 +401,18 @@ Route::Group(['prefix' => '/api/v1'], function () {
 
 
 // Frontend Routes
+
+Route::group(['namespace' => 'Frontend'], function () {
+
+    Route::group(['namespace' => 'Forum'], function () {
+        Route::any('/forum', 'ForumController@index')->name('forum');
+        Route::post('new-topic', 'ForumController@new_topic')->name('new-topic');
+    });
+
+    Route::get('/index', 'PageController@index')->name('index');
+
+
+});
 // ../site map
 Route::get('/sitemap.xml', 'SiteMapController@siteMap')->name('siteMap');
 Route::get('/{lang}/sitemap', 'SiteMapController@siteMap')->name('siteMapByLang');
