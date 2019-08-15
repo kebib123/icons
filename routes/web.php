@@ -407,6 +407,9 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::group(['namespace' => 'Forum'], function () {
         Route::any('/forum', 'ForumController@index')->name('forum');
         Route::post('new-topic', 'ForumController@new_topic')->name('new-topic');
+        Route::get('topic-filter', 'ForumController@topic_filter')->name('topic-filter');
+        Route::get('category-filter', 'ForumController@category_filter')->name('category-filter');
+        Route::any('forum-inner/{id}', 'ForumController@forum_inner')->name('forum-inner');
     });
 
     Route::get('/index', 'PageController@index')->name('index');

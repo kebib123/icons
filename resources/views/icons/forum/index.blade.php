@@ -5,6 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>Icons website</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -183,14 +185,14 @@
                 <div class="select-kit-body">
                     <ul class="category-collection" data-simplebar="init">
                         @foreach($categorycomp as $value)
-                            <li class="select-kit-row category-row is-highlighted ">
+                            <li class="cat-filter select-kit-row category-row is-highlighted " cat_id="{{$value->id}}">
                                 <div class="category-status">
                             <span class="badge-wrapper box">
                                 <span class="badge-category-bg" style="background-color: #AB9364;"></span>
                                 <span style="color: #FFFFFF;" class="badge-category ">
-                                    <span class="category-name">{{$value->name}}</span>
+                                    <span class="category-name" cat_id="{{$value->id}}">{{$value->name}}</span>
                                 </span>
-                            </span>
+                                    </span>
                                     <span class="topic-count">× 4</span>
                                 </div>
 
@@ -202,40 +204,12 @@
 
                         @endforeach
 
-                        <div class="category-status">
-                            <span class="badge-wrapper box">
-                                <span class="badge-category-bg" style="background-color: #AB9364;"></span>
-                                <span style="color: #FFFFFF;" class="badge-category ">
-                                    <span class="category-name">Uncategorized</span>
-                                </span>
-                            </span>
-                            <span class="topic-count">× 4</span>
-                        </div>
-
-                        <div class="category-desc">
-                            Topics that don't need a category, or don't fit into any other existing category.
-                        </div>
-                        </li>
-                        <li class="select-kit-row category-row  ">
-                            <div class="category-status">
-                            <span class="badge-wrapper box">
-                                <span class="badge-category-bg" style="background-color: #AB9364;"></span>
-                                <span style="color: #FFFFFF;" class="badge-category ">
-                                    <span class="category-name">Uncategorized</span>
-                                </span>
-                            </span>
-                                <span class="topic-count">× 4</span>
-                            </div>
-
-                            <div class="category-desc">
-                                Topics that don't need a category, or don't fit into any other existing category.
-                            </div>
-                        </li>
                     </ul>
                 </div>
 
                 <ul id="navigation-bar" class="nav nav-pills">
-                    <li title="topics with recent posts" class="active"><a href="">Latest</a></li>
+                    <li title="topics with recent posts" id="latest_filter" class=""><a
+                                href="javascript:void(0)">Latest</a></li>
                     <li title="the most active topics in the last year, month, week or day" class=""><a href="">Top</a>
                     </li>
                     <li title="all topics grouped by category" class=""><a href="/categories">Categories</a>
@@ -250,7 +224,7 @@
             </section>
         </div>
     </div>
-    <div class="container list-container">
+    <div id="filtered" class="container list-container">
         <div class="">
             <div class="w-100">
                 <div id="list-area">
@@ -266,147 +240,60 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="topic-list-item">
-                            <td class="main-link " colspan="1">
+                        @foreach($forum as $value)
+                            <tr class="topic-list-item">
+                                <td class="main-link " colspan="1">
                                 <span class="link-top-line">
-                                    <a href="forum-inner.html" class="raw-link raw-topic-link">Doubts on the use of your music for a full-length documentary.</a>
+                                    <a href="{{route('forum-inner',$value->id)}}"
+                                       class="raw-link raw-topic-link">{{$value->topic}}</a>
                                     <span class="topic-post-badges"></span>
                                 </span>
-                            </td>
+                                </td>
 
-                            <td class="category">
-                                <a class="badge-wrapper box" href="">
-                                    <span class="badge-category-bg" style="background-color: #AB9364;"></span>
-                                    <span style="color: #FFFFFF;" class="badge-category"
-                                          title="All questions related to our Fugue Music.">
-                                        <span class="category-name">Music</span>
+                                <td class="category">
+                                    <a class="badge-wrapper box" href="">
+                                        <span class="badge-category-bg" style="background-color: #AB9364;"></span>
+                                        <span style="color: #FFFFFF;" class="badge-category"
+                                              title="All questions related to our Fugue Music.">
+                                        <span class="category-name">{{$value->categories->parent_id ? \App\Model\ForumCategory::where('id',1)->first()->name:''}}</span>&ensp;
+                                        <span class="category-name">{{$value->categories->name}}</span>
                                     </span>
-                                </a>
-                            </td>
+                                    </a>
+                                </td>
 
-                            <td class="posters">
-                                <a href="" class="">
-                                    <img alt="" width="25" height="25"
-                                         src="https://community.icons8.com/letter_avatar_proxy/v2/letter/m/cab0a1/25.png"
-                                         class="avatar" title="mediaattack22 - Original Poster">
-                                </a>
-                                <a href="" class="latest">
-                                    <img alt="" width="25" height="25"
-                                         src="https://community.icons8.com/user_avatar/community.icons8.com/elenalo161/25/168_1.png"
-                                         class="avatar latest" title="elenalo161 - Most Recent Poster">
-                                </a>
-                            </td>
+                                <td class="posters">
+                                    <a href="" class="">
+                                        <img alt="" width="25" height="25"
+                                             src="https://community.icons8.com/letter_avatar_proxy/v2/letter/m/cab0a1/25.png"
+                                             class="avatar" title="mediaattack22 - Original Poster">
+                                    </a>
+                                    <a href="" class="latest">
+                                        <img alt="" width="25" height="25"
+                                             src="https://community.icons8.com/user_avatar/community.icons8.com/elenalo161/25/168_1.png"
+                                             class="avatar latest" title="elenalo161 - Most Recent Poster">
+                                    </a>
+                                </td>
 
-                            <td class="num posts" title="This topic has 1 reply">
-                                <a href="" class="badge-posts ">
-                                    <span class="number">1</span>
-                                </a>
-                            </td>
+                                <td class="num posts" title="This topic has 1 reply">
+                                    <a href="" class="badge-posts ">
+                                        <span class="number">1</span>
+                                    </a>
+                                </td>
 
-                            <td class="num views ">
-                                <span class="number" title="this topic has been viewed 4 times">4</span></td>
+                                <td class="num views ">
+                                    <span class="number" title="this topic has been viewed 4 times">4</span></td>
 
-                            <td class="num age "
-                                title="First post: Jul 17, 2019 9:24 am Posted: Jul 17, 2019 10:13 am">
-                                <a class="post-activity" href="">
-                                    <span class="relative-date">6h</span>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="topic-list-item">
-                            <td class="main-link " colspan="1">
-                                <span class="link-top-line">
-                                    <a href="forum-inner.html" class="raw-link raw-topic-link">Doubts on the use of your music for a full-length documentary.</a>
-                                    <span class="topic-post-badges"></span>
-                                </span>
-                            </td>
+                                <td class="num age "
+                                    title="First post: Jul 17, 2019 9:24 am Posted: Jul 17, 2019 10:13 am">
+                                    <a class="post-activity" href="">
+                                        <span class="relative-date">6h</span>
+                                    </a>
+                                </td>
+                            </tr>
 
-                            <td class="category">
-                                <a class="badge-wrapper box" href="">
-                                    <span class="badge-category-bg" style="background-color: #AB9364;"></span>
-                                    <span style="color: #FFFFFF;" class="badge-category"
-                                          title="All questions related to our Fugue Music.">
-                                        <span class="category-name">Music</span>
-                                    </span>
-                                </a>
-                            </td>
+                        @endforeach
 
-                            <td class="posters">
-                                <a href="" class="">
-                                    <img alt="" width="25" height="25"
-                                         src="https://community.icons8.com/letter_avatar_proxy/v2/letter/m/cab0a1/25.png"
-                                         class="avatar" title="mediaattack22 - Original Poster">
-                                </a>
-                                <a href="" class="latest">
-                                    <img alt="" width="25" height="25"
-                                         src="https://community.icons8.com/user_avatar/community.icons8.com/elenalo161/25/168_1.png"
-                                         class="avatar latest" title="elenalo161 - Most Recent Poster">
-                                </a>
-                            </td>
 
-                            <td class="num posts" title="This topic has 1 reply">
-                                <a href="" class="badge-posts ">
-                                    <span class="number">1</span>
-                                </a>
-                            </td>
-
-                            <td class="num views ">
-                                <span class="number" title="this topic has been viewed 4 times">4</span></td>
-
-                            <td class="num age "
-                                title="First post: Jul 17, 2019 9:24 am Posted: Jul 17, 2019 10:13 am">
-                                <a class="post-activity" href="">
-                                    <span class="relative-date">6h</span>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="topic-list-item">
-                            <td class="main-link " colspan="1">
-                                <span class="link-top-line">
-                                    <a href="forum-inner.html" class="raw-link raw-topic-link">Doubts on the use of your music for a full-length documentary.</a>
-                                    <span class="topic-post-badges"></span>
-                                </span>
-                            </td>
-
-                            <td class="category">
-                                <a class="badge-wrapper box" href="">
-                                    <span class="badge-category-bg" style="background-color: #AB9364;"></span>
-                                    <span style="color: #FFFFFF;" class="badge-category"
-                                          title="All questions related to our Fugue Music.">
-                                        <span class="category-name">Music</span>
-                                    </span>
-                                </a>
-                            </td>
-
-                            <td class="posters">
-                                <a href="" class="">
-                                    <img alt="" width="25" height="25"
-                                         src="https://community.icons8.com/letter_avatar_proxy/v2/letter/m/cab0a1/25.png"
-                                         class="avatar" title="mediaattack22 - Original Poster">
-                                </a>
-                                <a href="" class="latest">
-                                    <img alt="" width="25" height="25"
-                                         src="https://community.icons8.com/user_avatar/community.icons8.com/elenalo161/25/168_1.png"
-                                         class="avatar latest" title="elenalo161 - Most Recent Poster">
-                                </a>
-                            </td>
-
-                            <td class="num posts" title="This topic has 1 reply">
-                                <a href="" class="badge-posts ">
-                                    <span class="number">1</span>
-                                </a>
-                            </td>
-
-                            <td class="num views ">
-                                <span class="number" title="this topic has been viewed 4 times">4</span></td>
-
-                            <td class="num age "
-                                title="First post: Jul 17, 2019 9:24 am Posted: Jul 17, 2019 10:13 am">
-                                <a class="post-activity" href="">
-                                    <span class="relative-date">6h</span>
-                                </a>
-                            </td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -428,8 +315,8 @@
                         <input type="text" id="title_link" placeholder="Type title, or paste a link here">
                     </div>
                     <div class="category-input list-controls">
-                        <button class="category-btn" id="categoryBtn">
-                            All categories&nbsp;<i class="icofont-thin-down"></i>
+                        <button class="category-btn" id="reply-categoryBtn" data-id="">
+                            <span>All categories</span>&nbsp;<i class="icofont-thin-down"></i>
                         </button>
                         <div class="select-kit-body">
                             <ul class="category-collection" data-simplebar="init">
@@ -439,7 +326,8 @@
                             <span class="badge-wrapper box">
                                 <span class="badge-category-bg" style="background-color: #AB9364;"></span>
                                 <span style="color: #FFFFFF;" class="badge-category ">
-                                    <span class="category-name">{{$value->name}}</span>
+                                    <span id="select_category" cat_id="{{$value->id}}"
+                                          class="category-name">{{$value->name}}</span>
                                 </span>
                             </span>
                                             <span class="topic-count">× 4</span>
@@ -449,7 +337,7 @@
                                             {!! $value->description !!}
                                         </div>
                                     </li>
-                                    @include('icons.forum.Category.multi_cat',['category'=>$value])
+                                    @include('icons.forum.Category.reply_cat',['category'=>$value])
 
                                 @endforeach
 
@@ -459,7 +347,7 @@
                 </div>
             </div>
             <div class="toolbar-visible">
-                <textarea id="desc"></textarea>
+                <textarea name="detail" id="dec"></textarea>
             </div>
             <div class="submit-panel">
                 <div class="save-or-cancel">
@@ -560,14 +448,102 @@
 </script>
 <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace('desc');
+    CKEDITOR.replace('dec');
 
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+
+        $('#reply-control .category-input .category-collection li').on('click', function () {
+            var categoryname = $(this).find('.category-name').text();
+            let categoryid = $(this).find('.category-name').attr('cat_id');
+            $('#reply-categoryBtn span').text(categoryname);
+            let attribute = $('#reply-categoryBtn').attr("data-id", categoryid);
+            // console.log(attribute);
+            $(this).parents('.select-kit-body').hide();
+        });
+
+        $('#new_topic').on('click', function () {
+            let category = $('#reply-categoryBtn').attr('data-id');
+            console.log(category);
+            let title = $('#title_link').val();
+            let detail = CKEDITOR.instances['dec'].getData();
+
+            $.ajaxSetup({
+                headers: {"X-CSRF-TOKEN": jQuery(`meta[name="csrf-token"]`).attr("content")}
+            });
+            $.ajax({
+                type: "POST",
+                url: "{{route('new-topic')}}",
+                data: {
+                    category: category,
+                    title: title,
+                    detail: detail
+                },
+                success: function (data) {
+                    jQuery.each(data.errors, function (key, value) {
+
+                        toastr.warning(value);
+                    });
+                    if (data.status == 'success') {
+                        swal(data.status, data.message, data.status);
+                    }
+                }
+            });
+
+        });
+    });
 </script>
 <script>
     $(document).ready(function () {
-        $('#new_topic').click(function () {
-            let topic= $('')
+
+
+        $('#latest_filter').on('click', function () {
+            $(this).toggleClass('active');
+
+            $.ajaxSetup({
+                headers: {"X-CSRF-TOKEN": jQuery(`meta[name="csrf-token"]`).attr("content")}
+            });
+            $.ajax({
+                type: "GET",
+                url: "{{route('topic-filter')}}",
+
+                success: function (result) {
+                    $('#filtered').replaceWith($('#filtered').html(result));
+
+                }
+
+            });
         });
+        $('.cat-filter').on('click', function () {
+
+            let categoryName = $(this).find('.category-name').text();
+            var button = $('#categoryBtn').text(categoryName);
+            $(this).parents('.select-kit-body').hide();
+            console.log(categoryName);
+
+            let category_id = $(this).attr('cat_id');
+
+            $.ajaxSetup({
+                headers: {"X-CSRF-TOKEN": jQuery(`meta[name="csrf-token"]`).attr("content")}
+            });
+            $.ajax({
+                type: "GET",
+                url: "{{route('category-filter')}}",
+                data: {
+                    category_id: category_id
+                },
+                success: function (result) {
+                    $('#filtered').replaceWith($('#filtered').html(result));
+
+                }
+
+            });
+        });
+
+
     });
 </script>
 </body>

@@ -1,6 +1,6 @@
 @if($category->subCategory->isNotEmpty())
     @foreach($category->subCategory as $child)
-        <li class="cat-filter select-kit-row category-row is-highlighted " cat_id="{{$child->id}}">
+        <li class="select-kit-row category-row is-highlighted " cat_id="{{$child->id}}">
             <div class="category-status">
                 @if(isset($parent) && $parent != '')
                     <span class="badge-wrapper box">

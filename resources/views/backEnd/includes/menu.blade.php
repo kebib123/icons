@@ -456,6 +456,22 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
 
                         </ul>
                     </li>
+                    <li class="">
+                        <a>
+<span class="nav-caret">
+<i class="fa fa-caret-down"></i>
+</span>
+                            <span class="nav-icon">
+<i class="material-icons">&#xe8be;</i>
+</span>
+                            <span class="nav-text">User Management</span>
+                        </a>
+                        <ul class="nav-sub">
+                            <li><a href="{{route('add-category-forum')}}">All Users</a></li>
+                            <li><a href="{{route('all-topics')}}">All Topics</a></li>
+
+                        </ul>
+                    </li>
 
 
                     <li>

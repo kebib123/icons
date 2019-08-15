@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ForumTopic extends Model
 {
-    protected $fillable = ['topic', 'category_id', 'status'];
+    protected $fillable = ['topic', 'category_id', 'status','description'];
 
     public function Categories()
     {
