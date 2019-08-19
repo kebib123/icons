@@ -412,6 +412,7 @@ Route::group(['namespace' => 'Frontend'], function () {
         Route::any('forum-inner/{id}', 'ForumController@forum_inner')->name('forum-inner');
     });
 
+
     Route::get('/index', 'PageController@index')->name('index');
 
 
@@ -468,3 +469,7 @@ Route::get('/{lang?}/topic/{id}', 'FrontendHomeController@topicByLang')->name('F
     For new routes add them before // Frontend Routes
     If you added them after Frontend Routes they wouldn't work.
  */
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

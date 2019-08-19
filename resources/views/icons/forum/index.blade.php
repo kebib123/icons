@@ -180,7 +180,7 @@
         <div class="container">
             <section class="navigation-container">
                 <button class="category-btn" id="categoryBtn">
-                    All categories&nbsp;<i class="icofont-thin-down"></i>
+                    <span>All categories</span> <i class="icofont-thin-down"></i>
                 </button>
                 <div class="select-kit-body">
                     <ul class="category-collection" data-simplebar="init">
@@ -377,7 +377,8 @@
                     <div id="loginForm" class="toggleform">
                         <div class="title">Login</div>
                         <div class="description">You can use your account to log in to any of our products</div>
-                        <form class="is-big">
+                        <form action="{{route('login')}}" method="post" class="is-big">
+                            @csrf
                             <input name="email" placeholder="Email" class="" autocomplete="off">
                             <input type="password" name="password" placeholder="Password" class="" autocomplete="off">
 
@@ -390,7 +391,8 @@
                     <div id="registerForm" class="toggleform">
                         <div class="title">Register</div>
 
-                        <form class="is-big">
+                        <form action="{{route('register')}}" method="post" class="is-big">
+                            @csrf
                             <input name="email" placeholder="Email" class="" autocomplete="off">
                             <input type="password" name="password" placeholder="Password" class="" autocomplete="off">
 
@@ -520,7 +522,7 @@
         $('.cat-filter').on('click', function () {
 
             let categoryName = $(this).find('.category-name').text();
-            var button = $('#categoryBtn').text(categoryName);
+            var button = $('#categoryBtn span').text(categoryName);
             $(this).parents('.select-kit-body').hide();
             console.log(categoryName);
 
