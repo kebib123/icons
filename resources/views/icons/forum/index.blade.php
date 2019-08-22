@@ -232,6 +232,8 @@
                         <thead>
                         <tr>
                             <th class="default">Topic</th>
+                            <th class="default">Topic</th>
+                            <th class="default">Topic</th>
                             <th class="category ">Category</th>
                             <th class="posters">Users</th>
                             <th class="posts  num">Replies</th>
