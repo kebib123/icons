@@ -431,6 +431,9 @@
 
 <script src="{{asset('js/Frontend/app.min.js')}}"></script>
 <script src="{{asset('js/toastr.min.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+
 
 <script>
     @if(Session::has('success'))
@@ -496,6 +499,8 @@
             });
 
         });
+
+
     });
 </script>
 <script>
